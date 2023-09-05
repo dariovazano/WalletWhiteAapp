@@ -1,5 +1,6 @@
 {
   "expo": {
+    "jsEngine": "hermes",
     "name": "WalletWhite",
     "slug": "WalletWhite",
     "version": "1.0.0",
@@ -15,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "jsEngine": "jsc"
     },
     "android": {
       "adaptiveIcon": {
@@ -26,5 +28,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
+    
   }
 }
