@@ -65,20 +65,11 @@ export default function App() {
   }
 
 
-
-
-
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Word Futball Cup Champion Shopping List</Text>
+      <Text style={styles.title}>Shopping List</Text>
 
-      <View style={styles.listContainer}>
-        <FlatList
-          data={itemsList}
-          renderItem={renderListItem}
-          keyExtractor={item => item.id}
-        />
-      </View>
+
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -86,12 +77,18 @@ export default function App() {
           value={textValue}
           onChangeText={onHandleChangeItem}
         />
-
-
       </View>
       <View style={styles.buttonContainer}>
         <Button title="+ ADD" color={'#FCBF49'} onPress={addItem} />
       </View>
+      <View style={styles.listContainer}>
+        <FlatList
+          data={itemsList}
+          renderItem={renderListItem}
+          keyExtractor={item => item.id}
+        />
+      </View>
+
       <Modal modalVisible={modalVisible} onHandleDelete={onHandleDelete} aux={aux} onHandleCancelar={onHandleCancelar} />
     </View>
   )
@@ -129,7 +126,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     marginTop: 25,
-    height: 450,
+
   },
   itemContainer: {
     height: 40,
